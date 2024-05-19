@@ -129,8 +129,6 @@ const register = async (req, res, next) => {
       teacherId: isTeacher ? randomId : teacherId,
       isTeacher
     })
-    console.log(user)
-  
     
     await sendEmail({
       from: process.env.SMTP_ADMIN,
@@ -168,10 +166,26 @@ const register = async (req, res, next) => {
       await user.save();
     }
   
-    const { password: pwd, ...userWithoutPassword } = user.toObject();
+    // Game alanını çıkar
+    const { game, ...userWithoutGame } = user.toObject();
   
-    return res.status(200).json(userWithoutPassword);
+    // Exam alanını gruplayıp en yüksek puanları seç
+    const examScores = {};
+    user.exam.forEach(exam => {
+      if (!examScores[exam.content] || examScores[exam.content] < exam.point) {
+        examScores[exam.content] = exam.point;
+      }
+    });
+  
+    // Sadece en yüksek puanları içeren examScores objesini oluştur
+    const highestExamScores = Object.keys(examScores).map(content => ({
+      content,
+      point: examScores[content]
+    }));
+  
+    return res.status(200).json({ ...userWithoutGame, exam: highestExamScores });
   };
+  
   
 
 
