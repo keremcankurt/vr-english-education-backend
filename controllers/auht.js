@@ -40,7 +40,7 @@ const register = async (req, res, next) => {
     <body>
         <div class="email-container">
             <div class="header">
-                <img src="https://yourwebsite.com/logo.png" alt="Education-VR Logo">
+                <img src="https://englisheducation-vr.netlify.app/logo.png" alt="Education-VR Logo">
                 <h1>Engslish Education Uygulamamıza Hoş Geldiniz!</h1>
             </div>
             <div class="content">
@@ -88,7 +88,7 @@ const register = async (req, res, next) => {
       <body>
           <div class="email-container">
               <div class="header">
-                  <img src="https://yourwebsite.com/logo.png" alt="Education-VR Logo">
+                  <img src="https://englisheducation-vr.netlify.app/logo.png" alt="Education-VR Logo">
                   <h1>Engslish Education Uygulamamıza Hoş Geldiniz!</h1>
               </div>
               <div class="content">

@@ -40,7 +40,7 @@ const addCourse = async (req, res, next) => {
     <body>
         <div class="email-container">
             <div class="header">
-                <img src="https://yourwebsite.com/logo.png" alt="Education-VR Logo">
+                <img src="https://englisheducation-vr.netlify.app/logo.png" alt="Education-VR Logo">
                 <h1>Completed Course!</h1>
             </div>
             <div class="content">
@@ -89,7 +89,7 @@ const addCourse = async (req, res, next) => {
     <body>
         <div class="email-container">
             <div class="header">
-                <img src="https://yourwebsite.com/logo.png" alt="Education-VR Logo">
+                <img src="https://englisheducation-vr.netlify.app/logo.png" alt="Education-VR Logo">
                 <h1>Completed Course!</h1>
             </div>
             <div class="content">
@@ -156,7 +156,7 @@ const addGame = async (req, res, next) => {
     <body>
         <div class="email-container">
             <div class="header">
-                <img src="https://yourwebsite.com/logo.png" alt="Education-VR Logo">
+                <img src="https://englisheducation-vr.netlify.app/logo.png" alt="Education-VR Logo">
                 <h1>Completed Game!</h1>
             </div>
             <div class="content">
@@ -205,7 +205,7 @@ const addGame = async (req, res, next) => {
     <body>
         <div class="email-container">
             <div class="header">
-                <img src="https://yourwebsite.com/logo.png" alt="Education-VR Logo">
+                <img src="https://englisheducation-vr.netlify.app/logo.png" alt="Education-VR Logo">
                 <h1>Completed Course!</h1>
             </div>
             <div class="content">
@@ -273,7 +273,7 @@ const addExam = async (req, res, next) => {
     <body>
         <div class="email-container">
             <div class="header">
-                <img src="https://yourwebsite.com/logo.png" alt="Education-VR Logo">
+                <img src="https://englisheducation-vr.netlify.app/logo.png" alt="Education-VR Logo">
                 <h1>Exam Result!</h1>
             </div>
             <div class="content">
@@ -338,7 +338,7 @@ const addExam = async (req, res, next) => {
     <body>
         <div class="email-container">
             <div class="header">
-                <img src="https://yourwebsite.com/logo.png" alt="Education-VR Logo">
+                <img src="https://englisheducation-vr.netlify.app/logo.png" alt="Education-VR Logo">
                 <h1>Exam Result!</h1>
             </div>
             <div class="content">
