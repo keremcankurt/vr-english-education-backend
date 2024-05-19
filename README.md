@@ -15,44 +15,44 @@ Daha sonra proje dizinine gidin: npm install
 
 ### Auth
 
-** POST /auth/login **
+**POST /auth/login**
 Kullanıcı girişini gerçekleştirir.
 
-Request Body:
-TC: Kullanıcı TC kimlik numarası
-password: Kullanıcı şifresi
-isGame: (Opsiyonel) VR üzerinden giriş yapılıyorsa true
+#### Request Body:
+* TC: Kullanıcı TC kimlik numarası
+* password: Kullanıcı şifresi
+* isGame: (Opsiyonel) VR üzerinden giriş yapılıyorsa true
 
-** POST /auth/register **
+**POST /auth/register**
 Yeni kullanıcı kaydı oluşturur.
 
-Request Body:
+#### Request Body:
 
-TC: Kullanıcı TC kimlik numarası
+* TC: Kullanıcı TC kimlik numarası
 
-fullName: Kullanıcı adı ve soyadı
+* fullName: Kullanıcı adı ve soyadı
 
-email: Kullanıcı e-posta adresi
+* email: Kullanıcı e-posta adresi
 
-password: Kullanıcı şifresi
+* password: Kullanıcı şifresi
 
-teacherId: (Opsiyonel) Öğretmen ID, öğretmen değilse gönderilmemeli
+* teacherId: (Opsiyonel) Öğretmen ID, öğretmen değilse gönderilmemeli
 
-isTeacher: Kullanıcı öğretmen ise true
+* isTeacher: Kullanıcı öğretmen ise true
 
 ### Course
 
-** GET /course/:content **
+**GET /course/:content**
 
 Belirtilen içerik türü hakkında bilgi getirir.
 
 #### URL Parametreleri:
 
-content: İçerik ismi (Words, Friends, Numbers vs.)
+* content: İçerik ismi (Words, Friends, Numbers vs.)
 
 #### Request Body:
 
-*TC: Kullanıcı TC kimlik numarası
+* TC: Kullanıcı TC kimlik numarası
 
 #### Response:
 * studentsWithContent: Bölümü tamamlayan öğrenciler dizisi
@@ -64,11 +64,11 @@ content: İçerik ismi (Words, Friends, Numbers vs.)
 
 ### Student
 
-** POST /student/add-course **
+**POST /student/add-course**
 
 Belirtilen içeriği kullanıcıya ekler. VR üzerinden bölüm tamamlandıktan sonra kullanılır.
 
-Request Body:
+#### Request Body:
 
 * TC: Kullanıcı TC kimlik numarası
 * content: İçerik ismi (Words, Friends vs.)
