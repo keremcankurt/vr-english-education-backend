@@ -134,7 +134,7 @@ const addGame = async (req, res, next) => {
     }
     student.game.push({content, point, pointType});
     await student.save();
-
+    const date = new Date(Date.now());
     const timeZoneOffset = 3 * 60 * 60 * 1000; 
     const newDate = new Date(date.getTime() + timeZoneOffset);
     const formattedDate = newDate.toLocaleString('tr-TR', { hour12: false });
@@ -252,7 +252,7 @@ const addExam = async (req, res, next) => {
     }
     student.exam.push({content, point});
     await student.save();
-
+    const date = new Date(Date.now());
     const timeZoneOffset = 3 * 60 * 60 * 1000; 
     const newDate = new Date(date.getTime() + timeZoneOffset);
     const formattedDate = newDate.toLocaleString('tr-TR', { hour12: false });
