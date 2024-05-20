@@ -17,7 +17,10 @@ const addCourse = async (req, res, next) => {
     await student.save();
 
     const date = new Date(Date.now());
-    const newDate = date.toLocaleString('tr-TR', { hour12: false });
+
+    const timeZoneOffset = 3 * 60 * 60 * 1000; 
+    const newDate = new Date(date.getTime() + timeZoneOffset);
+    const formattedDate = newDate.toLocaleString('tr-TR', { hour12: false });
     let emailTemplate = `
     <!DOCTYPE html>
     <html lang="tr">
@@ -45,7 +48,7 @@ const addCourse = async (req, res, next) => {
             </div>
             <div class="content">
                 <h2>Sevgili ${student.fullName},</h2>
-                <p>Tebrikler! Dersi "${content}" başarıyla tamamladınız. Oyunlar ile konuyu pekiştirdikten sonra sınava girmeyi unutma. Tamamlama zamanı: ${newDate}</p>
+                <p>Tebrikler! Dersi "${content}" başarıyla tamamladınız. Oyunlar ile konuyu pekiştirdikten sonra sınava girmeyi unutma. Tamamlama zamanı: ${formattedDate}</p>
                 
                 <p>Herhangi bir sorunuz veya yardıma ihtiyacınız olursa, <a href="mailto:cankeremkurt@gmail.com">cankeremkurt@gmail.com</a> adresinden destek ekibimize ulaşabilirsiniz.</p>
                 <p>İyi öğrenmeler!</p>
@@ -94,7 +97,7 @@ const addCourse = async (req, res, next) => {
             </div>
             <div class="content">
                 <h2>Sevgili Öğretmenimiz,</h2>
-                <p>Öğrenciniz ${student.fullName} Dersi "${content}" başarıyla tamamladı. Tamamlama zamanı: ${newDate}</p>
+                <p>Öğrenciniz ${student.fullName} Dersi "${content}" başarıyla tamamladı. Tamamlama zamanı: ${formattedDate}</p>
                 
                 <p>Herhangi bir sorunuz veya yardıma ihtiyacınız olursa, <a href="mailto:cankeremkurt@gmail.com">cankeremkurt@gmail.com</a> adresinden destek ekibimize ulaşabilirsiniz.</p>
                 <p>İyi öğrenmeler!</p>
@@ -132,8 +135,9 @@ const addGame = async (req, res, next) => {
     student.game.push({content, point, pointType});
     await student.save();
 
-    const date = new Date(Date.now());
-    const newDate = date.toLocaleString('tr-TR', { hour12: false });
+    const timeZoneOffset = 3 * 60 * 60 * 1000; 
+    const newDate = new Date(date.getTime() + timeZoneOffset);
+    const formattedDate = newDate.toLocaleString('tr-TR', { hour12: false });
     let emailTemplate = `
     <!DOCTYPE html>
     <html lang="tr">
@@ -161,7 +165,7 @@ const addGame = async (req, res, next) => {
             </div>
             <div class="content">
                 <h2>Sevgili ${student.fullName},</h2>
-                <p>Tebrikler! Oyunu "${content}" başarıyla tamamladınız.<br/>${pointType == "Time" ? "Süre: "+Math.floor(point / 60).toString().padStart(2, '0')+":"+(point%60).toString().padStart(2, '0'): "Puan: "+point}<br/> Tamamlama zamanı: ${newDate}</p>
+                <p>Tebrikler! Oyunu "${content}" başarıyla tamamladınız.<br/>${pointType == "Time" ? "Süre: "+Math.floor(point / 60).toString().padStart(2, '0')+":"+(point%60).toString().padStart(2, '0'): "Puan: "+point}<br/> Tamamlama zamanı: ${formattedDate}</p>
                 
                 <p>Herhangi bir sorunuz veya yardıma ihtiyacınız olursa, <a href="mailto:cankeremkurt@gmail.com">cankeremkurt@gmail.com</a> adresinden destek ekibimize ulaşabilirsiniz.</p>
                 <p>İyi öğrenmeler!</p>
@@ -210,7 +214,7 @@ const addGame = async (req, res, next) => {
             </div>
             <div class="content">
                 <h2>Sevgili Öğretmenimiz,</h2>
-                <p>Öğrenciniz ${student.fullName} Oyunu "${content}" başarıyla tamamladı.<br/>${pointType == "Time" ? "Süre: "+Math.floor(point / 60).toString().padStart(2, '0')+":"+(point%60).toString().padStart(2, '0'): "Puan: "+point}<br/> Tamamlama zamanı: ${newDate}</p>
+                <p>Öğrenciniz ${student.fullName} Oyunu "${content}" başarıyla tamamladı.<br/>${pointType == "Time" ? "Süre: "+Math.floor(point / 60).toString().padStart(2, '0')+":"+(point%60).toString().padStart(2, '0'): "Puan: "+point}<br/> Tamamlama zamanı: ${formattedDate}</p>
                 
                 <p>Herhangi bir sorunuz veya yardıma ihtiyacınız olursa, <a href="mailto:cankeremkurt@gmail.com">cankeremkurt@gmail.com</a> adresinden destek ekibimize ulaşabilirsiniz.</p>
                 <p>İyi öğrenmeler!</p>
@@ -249,8 +253,9 @@ const addExam = async (req, res, next) => {
     student.exam.push({content, point});
     await student.save();
 
-    const date = new Date(Date.now());
-    const newDate = date.toLocaleString('tr-TR', { hour12: false });
+    const timeZoneOffset = 3 * 60 * 60 * 1000; 
+    const newDate = new Date(date.getTime() + timeZoneOffset);
+    const formattedDate = newDate.toLocaleString('tr-TR', { hour12: false });
     let emailTemplate = `
     <!DOCTYPE html>
     <html lang="tr">
@@ -284,14 +289,14 @@ const addExam = async (req, res, next) => {
                   <div>
                     <p>Maalesef "${content}" dersinin sınavından yeterli puanı alamadın. Lütfen daha çok çalışıp tekrar sınava gir.</p>
                     <p>Puan: ${point}</p>
-                    <p>Sınava giriş tarihi: ${newDate}</p>
+                    <p>Sınava giriş tarihi: ${formattedDate}</p>
                   </div>`
                   :
                   `
                     <>
                       <p>Tebrikler!"${content}" dersinin sınavından yeterli puanı aldın. Sonraki derse geçebilirsin.</p>
                       <p>Puan: ${point}</p>
-                      <p>Sınava giriş tarihi: ${newDate}</p>
+                      <p>Sınava giriş tarihi: ${formattedDate}</p>
                     </>
                   `
 
@@ -343,7 +348,7 @@ const addExam = async (req, res, next) => {
             </div>
             <div class="content">
                 <h2>Sevgili Öğretmenimiz,</h2>
-                <p>Öğrenciniz ${student.fullName} "${content}" dersinin sınavından ${point} puan almıştır.<br/> Sınava giriş zamanı: ${newDate}</p>
+                <p>Öğrenciniz ${student.fullName} "${content}" dersinin sınavından ${point} puan almıştır.<br/> Sınava giriş zamanı: ${formattedDate}</p>
                 <p>Herhangi bir sorunuz veya yardıma ihtiyacınız olursa, <a href="mailto:cankeremkurt@gmail.com">cankeremkurt@gmail.com</a> adresinden destek ekibimize ulaşabilirsiniz.</p>
                 <p>İyi öğrenmeler!</p>
                 <p>Saygılarımızla,</p>
