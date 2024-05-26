@@ -50,7 +50,7 @@ const addCourse = async (req, res, next) => {
                 <h2>Sevgili ${student.fullName},</h2>
                 <p>Tebrikler! Dersi "${content}" başarıyla tamamladınız. Oyunlar ile konuyu pekiştirdikten sonra sınava girmeyi unutma. Tamamlama zamanı: ${formattedDate}</p>
                 
-                <p>Herhangi bir sorunuz veya yardıma ihtiyacınız olursa, <a href="mailto:cankeremkurt@gmail.com">cankeremkurt@gmail.com</a> adresinden destek ekibimize ulaşabilirsiniz.</p>
+                <p>Herhangi bir sorunuz veya yardıma ihtiyacınız olursa, <a href="mailto:englisheducationVR@gmail.com">englisheducationVR@gmail.com</a> adresinden destek ekibimize ulaşabilirsiniz.</p>
                 <p>İyi öğrenmeler!</p>
                 <p>Saygılarımızla,</p>
                 <p>English Education Ekibi</p>
@@ -99,7 +99,7 @@ const addCourse = async (req, res, next) => {
                 <h2>Sevgili Öğretmenimiz,</h2>
                 <p>Öğrenciniz ${student.fullName} Dersi "${content}" başarıyla tamamladı. Tamamlama zamanı: ${formattedDate}</p>
                 
-                <p>Herhangi bir sorunuz veya yardıma ihtiyacınız olursa, <a href="mailto:cankeremkurt@gmail.com">cankeremkurt@gmail.com</a> adresinden destek ekibimize ulaşabilirsiniz.</p>
+                <p>Herhangi bir sorunuz veya yardıma ihtiyacınız olursa, <a href="mailto:englisheducationVR@gmail.com">englisheducationVR@gmail.com</a> adresinden destek ekibimize ulaşabilirsiniz.</p>
                 <p>İyi öğrenmeler!</p>
                 <p>Saygılarımızla,</p>
                 <p>English Education Ekibi</p>
@@ -167,7 +167,7 @@ const addGame = async (req, res, next) => {
                 <h2>Sevgili ${student.fullName},</h2>
                 <p>Tebrikler! Oyunu "${content}" başarıyla tamamladınız.<br/>${pointType == "Time" ? "Süre: "+Math.floor(point / 60).toString().padStart(2, '0')+":"+(point%60).toString().padStart(2, '0'): "Puan: "+point}<br/> Tamamlama zamanı: ${formattedDate}</p>
                 
-                <p>Herhangi bir sorunuz veya yardıma ihtiyacınız olursa, <a href="mailto:cankeremkurt@gmail.com">cankeremkurt@gmail.com</a> adresinden destek ekibimize ulaşabilirsiniz.</p>
+                <p>Herhangi bir sorunuz veya yardıma ihtiyacınız olursa, <a href="mailto:englisheducationVR@gmail.com">englisheducationVR@gmail.com</a> adresinden destek ekibimize ulaşabilirsiniz.</p>
                 <p>İyi öğrenmeler!</p>
                 <p>Saygılarımızla,</p>
                 <p>English Education Ekibi</p>
@@ -216,7 +216,7 @@ const addGame = async (req, res, next) => {
                 <h2>Sevgili Öğretmenimiz,</h2>
                 <p>Öğrenciniz ${student.fullName} Oyunu "${content}" başarıyla tamamladı.<br/>${pointType == "Time" ? "Süre: "+Math.floor(point / 60).toString().padStart(2, '0')+":"+(point%60).toString().padStart(2, '0'): "Puan: "+point}<br/> Tamamlama zamanı: ${formattedDate}</p>
                 
-                <p>Herhangi bir sorunuz veya yardıma ihtiyacınız olursa, <a href="mailto:cankeremkurt@gmail.com">cankeremkurt@gmail.com</a> adresinden destek ekibimize ulaşabilirsiniz.</p>
+                <p>Herhangi bir sorunuz veya yardıma ihtiyacınız olursa, <a href="mailto:englisheducationVR@gmail.com">englisheducationVR@gmail.com</a> adresinden destek ekibimize ulaşabilirsiniz.</p>
                 <p>İyi öğrenmeler!</p>
                 <p>Saygılarımızla,</p>
                 <p>English Education Ekibi</p>
@@ -301,7 +301,7 @@ const addExam = async (req, res, next) => {
                   `
 
                 }
-                <p>Herhangi bir sorunuz veya yardıma ihtiyacınız olursa, <a href="mailto:cankeremkurt@gmail.com">cankeremkurt@gmail.com</a> adresinden destek ekibimize ulaşabilirsiniz.</p>
+                <p>Herhangi bir sorunuz veya yardıma ihtiyacınız olursa, <a href="mailto:englisheducationVR@gmail.com">englisheducationVR@gmail.com</a> adresinden destek ekibimize ulaşabilirsiniz.</p>
                 <p>İyi öğrenmeler!</p>
                 <p>Saygılarımızla,</p>
                 <p>English Education Ekibi</p>
@@ -349,7 +349,7 @@ const addExam = async (req, res, next) => {
             <div class="content">
                 <h2>Sevgili Öğretmenimiz,</h2>
                 <p>Öğrenciniz ${student.fullName} "${content}" dersinin sınavından ${point} puan almıştır.<br/> Sınava giriş zamanı: ${formattedDate}</p>
-                <p>Herhangi bir sorunuz veya yardıma ihtiyacınız olursa, <a href="mailto:cankeremkurt@gmail.com">cankeremkurt@gmail.com</a> adresinden destek ekibimize ulaşabilirsiniz.</p>
+                <p>Herhangi bir sorunuz veya yardıma ihtiyacınız olursa, <a href="mailto:englisheducationVR@gmail.com">englisheducationVR@gmail.com</a> adresinden destek ekibimize ulaşabilirsiniz.</p>
                 <p>İyi öğrenmeler!</p>
                 <p>Saygılarımızla,</p>
                 <p>English Education Ekibi</p>

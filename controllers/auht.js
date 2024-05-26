@@ -52,7 +52,7 @@ const register = async (req, res, next) => {
                     <li><strong>Adım 1:</strong> Hesabınıza kullanıcı bilgilerinizle giriş yapın.</li>
                     <li><strong>Adım 2:</strong> VR ortamlarımızı keşfedin ve ilk dersinize başlayın.</li>
                 </ul>
-                <p>Herhangi bir sorunuz veya yardıma ihtiyacınız olursa, <a href="mailto:cankeremkurt@gmail.com">cankeremkurt@gmail.com</a> adresinden destek ekibimize ulaşabilirsiniz.</p>
+                <p>Herhangi bir sorunuz veya yardıma ihtiyacınız olursa, <a href="mailto:englisheducationVR@gmail.com">englisheducationVR@gmail.com</a> adresinden destek ekibimize ulaşabilirsiniz.</p>
                 <p>İyi öğrenmeler!</p>
                 <p>Saygılarımızla,</p>
                 <p>English Education Ekibi</p>
@@ -98,7 +98,7 @@ const register = async (req, res, next) => {
                   <p>Öğrencilerinizin sisteme kayıt olabilmesi için onlara aşağıdaki öğretmen kimliğini (teacherId) vermeniz gerekmektedir:</p>
                   <p><strong>Öğretmen Kimliği (teacherId): ${randomId}</strong></p>
                   <p>Öğrencileriniz, bu kimliği kullanarak sisteme kayıt olabilir ve derslerine başlayabilirler.</p>
-                  <p>Herhangi bir sorunuz veya yardıma ihtiyacınız olursa, <a href="mailto:cankeremkurt@gmail.com">cankeremkurt@gmail.com</a> adresinden destek ekibimize ulaşabilirsiniz.</p>
+                  <p>Herhangi bir sorunuz veya yardıma ihtiyacınız olursa, <a href="mailto:englisheducationVR@gmail.com">englisheducationVR@gmail.com</a> adresinden destek ekibimize ulaşabilirsiniz.</p>
                   <p>İyi çalışmalar dileriz!</p>
                   <p>Saygılarımızla,</p>
                   <p>English Education Ekibi</p>
