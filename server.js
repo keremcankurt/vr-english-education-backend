@@ -12,7 +12,7 @@ connectDatabase()
 
 const app = express()
 app.use(cors({
-  origin: 'https://englisheducation-vr.netlify.app',
+  origin: 'https://englisheducation-vr.com.tr',
   methods: ['GET', 'PUT', 'POST', 'DELETE', 'OPTIONS'], 
   allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept', 'Authorization'], 
   credentials: true,
